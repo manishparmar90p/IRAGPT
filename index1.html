@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRAGPT</title>
+  <link rel="stylesheet" href="bootcamp.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <h1>IRAGPT</h1>
+  </header>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <div class="container">
+
+    <!-- ========= SIDEBAR ========= -->
+    <aside class="sidebar">
+      <button id="newChatBtn" class="new-chat-btn">+ New Chat</button>
+      <div class="chat-list"></div>
+    </aside>
+
+    <!-- ========= CHAT AREA ========= -->
+    <main class="chat-area">
+      
+      <!-- Messages -->
+      <div class="messages"></div>
+
+      <!-- Footer Input -->
+      <footer class="chat-footer">
+        <input 
+          type="text" 
+          id="userInput" 
+          placeholder="Type your message..." 
+          autocomplete="off"
+        />
+        <button id="sendBtn">Send</button>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="bootcamp.js"></script>
+</body>
+</html>

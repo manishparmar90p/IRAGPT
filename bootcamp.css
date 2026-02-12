@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #1e1e1e;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #111;
+  padding: 15px 20px;
+  border-bottom: 1px solid #333;
+}
+
+.header h1 {
+  font-size: 20px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 250px;
+  background: #171717;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.new-chat-btn {
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #2a2a2a;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.new-chat-btn:hover {
+  background: #333;
+}
+
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-item {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-item:hover {
+  background: #2a2a2a;
+}
+
+.chat-item.active {
+  background: #333;
+}
+
+/* ================= CHAT AREA ================= */
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Messages */
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Message Bubble */
+.message {
+  max-width: 70%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* User message right side */
+.message.user {
+  background: #3a3a3a;
+  margin-left: auto;
+}
+
+/* Bot message left side */
+.message.bot {
+  background: #2a2a2a;
+  margin-right: auto;
+}
+
+/* Code block */
+.code-wrapper {
+  position: relative;
+}
+
+pre {
+  background: #111;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+.chat-footer {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #333;
+  background: #111;
+}
+
+#userInput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #2a2a2a;
+  color: white;
+}
+
+#sendBtn {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+#sendBtn:hover {
+  background: #45a049;
+}
+
+/* ================= TOAST ================= */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  padding: 10px 15px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.toast.show {
+  opacity: 1;
+}
